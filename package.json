@@ -11,6 +11,7 @@
     "gridsome": "^0.6.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.3.2"
+    "@gridsome/transformer-remark": "^0.3.2",
+    "moment": "^2.24.0"
   }
 }

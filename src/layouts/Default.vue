@@ -1,20 +1,8 @@
 <template>
   <div class="layout">
-    <header class="header">
-        <h1>{{ $static.metaData.siteName }}</h1>
-        <p> A simple blog designed with Gridsome </p>
-    </header>
     <slot/>
   </div>
 </template>
-
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
 
 <style>
 body {
@@ -31,17 +19,5 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.header {
-  font-family: 'Stylish';
-  font-size: 35px;
-  text-align: center;
-  line-height: 20px;
-  padding: 2em;
-}
-
-.header p {
-  font-weight: 200;
 }
 </style>

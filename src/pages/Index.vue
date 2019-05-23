@@ -1,28 +1,56 @@
 <template>
   <Layout>
-
-  <div class="posts">
-    <Post />
-  </div>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <header class="header">
+      <h1>Gridsome Blog</h1>
+      <p>A simple blog designed with Gridsome</p>
+    </header>
+    <section class="posts">
+      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+    </section>
   </Layout>
 </template>
 
 <script>
+import PostList from "@/components/PostList";
 export default {
+  components: {
+    PostList
+  },
   metaInfo: {
-    title: 'Hello, world!'
+    title: "A simple blog"
   }
-}
+};
 </script>
 
+<page-query>
+query {
+  allPost {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        timeToRead
+        description
+        date
+        path
+      }
+    }
+
+  }
+}
+</page-query>
+
 <style>
-.home-links a {
-  margin-right: 1rem;
+.header {
+  font-family: "Stylish";
+  font-size: 35px;
+  text-align: center;
+  line-height: 20px;
+  padding: 2em;
+}
+
+.header p {
+  font-weight: 200;
 }
 </style>
