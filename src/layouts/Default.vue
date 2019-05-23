@@ -5,7 +5,7 @@
       <p>
         Built with Gridsome &
         Made with ❤️ by
-        <g-link class="link" to="//twitter.com/lauragift21">Gift Egwuenu</g-link>
+        <a class="link" href="//twitter.com/lauragift21">Gift Egwuenu</a>
       </p>
     </div>
   </div>
