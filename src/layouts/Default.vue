@@ -3,8 +3,9 @@
     <slot/>
     <div class="footer">
       <p>
-        Built with Gridsome &
-        Made with ❤️ by
+        Built with
+        <a class="link" href="//gridsome.org">Gridsome</a>
+        & Made with ❤️ by
         <a class="link" href="//twitter.com/lauragift21">Gift Egwuenu</a>
       </p>
     </div>
@@ -30,7 +31,7 @@ body {
 }
 
 .footer {
-  padding: calc(30em / 4);
+  padding-top: calc(30em / 4);
   text-align: center;
   font-size: 1em;
 }
