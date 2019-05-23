@@ -3,95 +3,48 @@ title: "Markdown styling"
 description: "Markdown post content stress test. See how your post content is being styled with Tailwind CSS."
 date: 2019-05-21
 ---
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
 
-Heading 1 is the title of this page. You should only use it once in a document.
+Today, A lot of developers are conversant with the `alt` attribute on images. I can say most of us know that it is one way of making webpages accessible but do we really understand the scope of the alternative text, when to make use of it, how to use it. I agree it is one step to being an accessibility advocate so that is why in this article, I'll be explaining in detail the alt attribute and how practicing it can improve web accessibility in a long run.
 
-## Links
+Truthful confession here, before I became really involved with accessibility I didn't understand the importance of having a descriptive text for all images on the web. I'm mostly guilty of leaving the `alt` attribute blank. Now that I know better I can't keep it to myself which is one of the reasons I'm writing this article to share this new knowledge gained with everyone.
 
-When you paste in a URL like so: https://gridsome.org, it will be automatically converted to a link. Otherwise, you can use the standard `[link text](https://...)` markdown to create a link.
+## What is Alternative Text?
+Alternative text or alt text as it is fondly called is a written text description for an image on the web.
+Alt text is really useful and can come in handy in any of these scenarios:
+- people using assistive technology such as screen readers and so on.
+- people that have images turned off on their devices due to a poor internet connection.
+- it helps improve SEO for the webpage.
 
-## Ordered list
+Writing good alt text for images is very important and shouldn't be sidelined. To show how important this is the Web Content Accessibility Guidelines document [WCAG 2.1](https://www.w3.org/TR/WCAG21/#text-alternatives) have it has the first rule which shows that it's really important.
 
-1. python
-2. root
-3. public
-4. bypass
+> Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.
 
-## Unordered list
+## How to Use Alt Text
+Typically, when adding an image to a webpage, we use the HTML image element to represent the image and the alt attribute on the image tag to give a description of the image. Here's an example:
 
-- boolean
-- stack
-- foad
-- tarball
 
-## A definition list
-
-This list is created using `<dl>`, `<dt>`, and `<dd>` HTML tags.
-
-<dl>
-  <dt>First Term</dt>
-  <dd>This is the definition of the first term.</dd>
-  <dt>Second Term</dt>
-  <dd>This is one definition of the second term. </dd>
-  <dd>This is another definition of the second term.</dd>
-</dl>
-
-## Blockquotes
-
-> Trojan horse protected afk finally irc ip new kilo fork boolean. Int ack long less lib crack emacs gnu foo *.* segfault suitably small values ascii rsa throw void I'm sorry Dave
-
-## Code
-
-### Fenced codeblocks
-
-Bleda uses [gridsome-plugin-remark-shiki](https://github.com/EldoranDev/gridsome-plugin-remark-shiki) to add syntax highlighting to code blocks. Roll with the default light one, or choose one of the other [themes available](https://github.com/octref/shiki/tree/master/packages/themes).
-
-```vue
-<template>
-  <div id="app">
-    <h1>My Todo App!</h1>
-    <TodoList/>
-  </div>
-</template>
-
-<script>
-import TodoList from './components/TodoList.vue'
-
-export default {
-  components: {
-    TodoList
-  }
-}
-</script>
-
-<style lang="postcss">
-#app {
-  @apply text-grey-darker max-w-sm mx-auto leading-normal font-sans;
-
-  h1 {
-    @apply text-black text-4xl;
-  }
-}
-</style>
+```html
 ```
+The above alt attribute describes the context of the image. In this case, if a screen reader is being used on this page. It'll read the alt text instead and the user gets a very descriptive context of the image used.
+There are other things to consider when writing alt text this is just a primer to writing descriptive alternate text for images. I'll be going over the important concepts to take note of when using images on the webpages.
+All images on the web must have alternative text that describes the function of the image.
+There are seven concepts for using images on the web I'll be outlining each of them and they include:
 
-Of course, it also styles `inline code blocks`.
+1. **Informative Images:** Informative images are images that describe a piece of information or concept. The information described can be anything from an emotion/impression to a label or the file format used in a link. The text alternative for an informative image should convey the meaning or content of the image. Here's an example:
 
-## Images
 
-Here's a local image:
+```html
+<img src="./girl.png" alt="A girl smiling happily.">
+```
+The image illustrated above shows the emotion of a girl. The idea therefore, is to make the alternative text convey this information.
 
-![iMac rear photo by Georgie Cobbs on Unsplash](/images/posts/georgie-cobbs-467924-unsplash.jpg)
+2. **Decorative Images:** Decorative images are images that don't necessarily convey meaning or information. These images don't add information to the content of the page mainly because the content description is already provided or the image is used for styling purposes. Therefore, the `alt` attribute is not provided or left empty `(alt="")`. The reason for this is to avoid assistive technologies such as screen readers from reading a redundant text to its users. Leaving the `alt` attribute out entirely is not a good practice because some screen readers will announce the file name of the image instead. An example is shown below:
 
-As you just saw, Gridsome loads it only when it enters your viewport.
+5. **Group of Images:** This type of images represent images that are grouped together to convey a single piece of information. An example can be a collection of heart icons to represent a rating. When adding descriptive text for each image, the alt attribute for only one of the image should have a description of the group of images, while the other images have an empty `alt` attribute so they are ignored by screen readers. Here's an example:
 
-Here's an external image, hotlinked from Unsplash and linked to its page there:
 
-[![Window photo by Mirna Rivalta on Unsplash](https://images.unsplash.com/photo-1551107671-b3ce56b6c667?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=360&q=80)](https://unsplash.com/photos/UecFf82b1qo)
-
-As you can see, the lightbox is not used for linked images. Also, if the URL they link to is external, it will open in a new tab - just like the one above.
+```html
+<img src="full-heart.png" alt="1.5 of 3 hearts">
+<img src="half-heart.png" alt="">
+<img src="empty-heart.png" alt="">
+```

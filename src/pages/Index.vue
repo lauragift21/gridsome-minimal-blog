@@ -47,7 +47,7 @@ query {
   font-size: 35px;
   text-align: center;
   line-height: 20px;
-  padding: 2em;
+  padding: 0.7em;
 }
 
 .header p {

@@ -7,11 +7,12 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/remark-prismjs": "^0.0.5",
     "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.3.2",
     "gridsome": "^0.6.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.3.2",
     "moment": "^2.24.0"
   }
 }

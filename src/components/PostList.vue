@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 import moment from 'moment';
 
 export default {
@@ -22,7 +21,6 @@ export default {
   }
 };
 </script>
-
 
 <style>
 .line {

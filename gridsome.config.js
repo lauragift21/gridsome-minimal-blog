@@ -16,5 +16,13 @@ module.exports = {
         route: '/blog/:slug'
       }
     }
-  ]
+  ],
+  transformers: {
+    //Add markdown support to all file-system sources
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 }
