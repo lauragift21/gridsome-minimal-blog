@@ -1,13 +1,8 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about">About</g-link>
-      </nav>
+        <h1>{{ $static.metaData.siteName }}</h1>
+        <p> A simple blog designed with Gridsome </p>
     </header>
     <slot/>
   </div>
@@ -27,6 +22,8 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
+  border: 15px solid #fecd43;
+  height: 100vh;
 }
 
 .layout {
@@ -37,14 +34,14 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+  font-family: 'Stylish';
+  font-size: 35px;
+  text-align: center;
+  line-height: 20px;
+  padding: 2em;
 }
 
-.nav__link {
-  margin-left: 20px;
+.header p {
+  font-weight: 200;
 }
 </style>
