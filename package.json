@@ -7,6 +7,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/source-filesystem": "^0.5.0",
     "gridsome": "^0.6.0"
+  },
+  "devDependencies": {
+    "@gridsome/transformer-remark": "^0.3.2"
   }
 }
