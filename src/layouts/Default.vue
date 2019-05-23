@@ -1,29 +1,25 @@
 <template>
   <div class="layout">
-    <header class="header">
-        <h1>{{ $static.metaData.siteName }}</h1>
-        <p> A simple blog designed with Gridsome </p>
-    </header>
     <slot/>
+    <div class="footer">
+      <p>
+        Built with Gridsome &
+        Made with ❤️ by
+        <a class="link" href="//twitter.com/lauragift21">Gift Egwuenu</a>
+      </p>
+    </div>
   </div>
 </template>
 
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
-
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
   border: 15px solid #fecd43;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .layout {
@@ -33,15 +29,16 @@ body {
   padding-right: 20px;
 }
 
-.header {
-  font-family: 'Stylish';
-  font-size: 35px;
+.footer {
+  padding: calc(30em / 4);
   text-align: center;
-  line-height: 20px;
-  padding: 2em;
+  font-size: 1em;
 }
 
-.header p {
-  font-weight: 200;
+.link {
+  border: 2px dashed #fecd43;
+  padding: 7px;
+  color: #333;
+  text-decoration: none;
 }
 </style>
