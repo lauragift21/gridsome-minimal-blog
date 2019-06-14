@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <header class="header">
-      <h1>Gridsome Blog</h1>
-      <p>A simple blog designed with Gridsome</p>
+      <h1 v-html="$page.metaData.siteName" />
+      <p v-html="$page.metaData.siteDescription" />
     </header>
     <section class="posts">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
@@ -24,6 +24,10 @@ export default {
 
 <page-query>
 query {
+  metaData {
+    siteName
+    siteDescription
+  }
   allPost {
     totalCount
     edges {
