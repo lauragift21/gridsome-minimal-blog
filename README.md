@@ -2,6 +2,9 @@
 
 > A blog starter theme for [Gridsome]() with a minimalistic design.
 
+<!-- Markdown snippet -->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lauragift21/gridsome-minimal-blog)
+
 ## Preview
 
 ![preview](https://res.cloudinary.com/lauragift/image/upload/v1558648720/gridsome-minimal-blog_qqm49s.png)
