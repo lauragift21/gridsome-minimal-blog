@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <main class="layout">
     <slot/>
     <div class="footer">
       <p>
@@ -9,7 +9,7 @@
         <a class="link" href="//twitter.com/lauragift21">Gift Egwuenu</a>
       </p>
     </div>
-  </div>
+  </main>
 </template>
 
 <style>
