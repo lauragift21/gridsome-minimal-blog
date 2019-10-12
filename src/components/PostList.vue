@@ -50,7 +50,7 @@ export default {
   height: auto;
   clip: auto;
   color: #000000;
-  background-color: $white;
+  background-color: #ffffff;
   clip-path: unset;
 }
 </style>
