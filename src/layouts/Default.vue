@@ -1,5 +1,5 @@
 <template>
-  <main class="layout">
+  <main class="layout" role="main">
     <slot/>
     <div class="footer">
       <p>
