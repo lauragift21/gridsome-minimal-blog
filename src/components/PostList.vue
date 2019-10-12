@@ -5,7 +5,7 @@
     <h3 class="title" v-html="post.title"/>
     <p class="description" v-html="post.description"/>
     <b>{{post.timeToRead}} min read</b> &nbsp;
-    <g-link :to="post.path" class="read">Read More <span class="visuallyhidden">about post.title</span></g-link>
+    <g-link :to="post.path" class="read">Read More <span class="visuallyhidden">about {{post.title}}</span></g-link>
   </div>
 </template>
 
