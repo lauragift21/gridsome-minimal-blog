@@ -2,10 +2,10 @@
   <div class="post-list">
     <hr class="line">
     <p class="date" v-html="post.date"/>
-    <h1 class="title" v-html="post.title"/>
+    <h3 class="title" v-html="post.title"/>
     <p class="description" v-html="post.description"/>
     <b>{{post.timeToRead}} min read</b> &nbsp;
-    <g-link :to="post.path" class="read">Read More...</g-link>
+    <g-link :to="post.path" class="read">Read More <span class="visuallyhidden">about {{post.title}}</span></g-link>
   </div>
 </template>
 
@@ -30,5 +30,27 @@ export default {
   color: #333;
   text-decoration: none;
   border: 2px dashed #fecd43;
+}
+
+.visuallyhidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+.visuallyhidden:focus {
+  display: inline-block;
+  padding: 15px 23px 14px;
+  width: auto;
+  height: auto;
+  clip: auto;
+  color: #000000;
+  background-color: #ffffff;
+  clip-path: unset;
 }
 </style>

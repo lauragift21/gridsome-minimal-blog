@@ -2,7 +2,7 @@
   <Layout>
     <header class="header">
       <h1 v-html="$page.metaData.siteName" />
-      <p v-html="$page.metaData.siteDescription" />
+      <h2 v-html="$page.metaData.siteDescription" />
     </header>
     <section class="posts">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
@@ -54,7 +54,8 @@ query {
   padding: 0.7em;
 }
 
-.header p {
+.header h2 {
   font-weight: 200;
+  font-size: 35px;
 }
 </style>
