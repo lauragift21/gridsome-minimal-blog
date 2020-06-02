@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <header class="header">
-      <h1 v-html="$page.metaData.siteName" />
-      <h2 v-html="$page.metaData.siteDescription" />
+      <h1 v-html="$page.metadata.siteName" />
+      <h2 v-html="$page.metadata.siteDescription" />
     </header>
     <section class="posts">
       <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
@@ -24,7 +24,7 @@ export default {
 
 <page-query>
 query {
-  metaData {
+  metadata {
     siteName
     siteDescription
   }
