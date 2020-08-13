@@ -1,5 +1,6 @@
 <template>
   <main class="layout" role="main">
+    <Header />
     <slot />
     <div class="footer">
       <p>
@@ -12,6 +13,15 @@
   </main>
 </template>
 
+<script>
+import Header from "./partials/Header";
+export default {
+  components: {
+    Header,
+  },
+};
+</script>
+
 <style>
 :root {
   --text-color: #333;
@@ -21,9 +31,9 @@
 }
 :root [data-theme="sepia"] {
   --text-color: #433422;
-  --border-color: #111;
+  --border-color: #00a672;
   --bkg-color: #f1e7d0;
-  --line-color: #111;
+  --line-color: #00a672;
 }
 
 :root [data-theme="dark"] {
@@ -42,6 +52,7 @@ body {
   min-height: 100vh;
   background-color: var(--bkg-color);
   color: var(--text-color);
+  transition: background 0.3s;
 }
 
 .layout {
