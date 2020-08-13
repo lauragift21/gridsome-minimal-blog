@@ -1,6 +1,6 @@
 <template>
   <main class="layout" role="main">
-    <slot/>
+    <slot />
     <div class="footer">
       <p>
         Built with
@@ -13,14 +13,35 @@
 </template>
 
 <style>
+:root {
+  --text-color: #333;
+  --border-color: #fecd43;
+  --bkg-color: white;
+  --line-color: #cdc8c5;
+}
+:root [data-theme="sepia"] {
+  --text-color: #433422;
+  --border-color: #fecd43;
+  --bkg-color: #f1e7d0;
+  --line-color: white;
+}
+
+:root [data-theme="dark"] {
+  --text-color: #ebf4f1;
+  --border-color: #fecd43;
+  --bkg-color: #091a28;
+  --line-color: #fecd43;
+}
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  border: 15px solid #fecd43;
+  border: 15px solid var(--border-color);
   min-height: 100vh;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
 }
 
 .layout {
@@ -37,9 +58,9 @@ body {
 }
 
 .link {
-  border: 2px dashed #fecd43;
+  border: 2px dashed var(--border-color);
   padding: 7px;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
 }
 </style>
