@@ -5,7 +5,11 @@
       <h2 v-html="$page.metadata.siteDescription" />
     </header>
     <section class="posts">
-      <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+      <PostList
+        v-for="edge in $page.allPost.edges"
+        :key="edge.node.id"
+        :post="edge.node"
+      />
     </section>
   </Layout>
 </template>
@@ -14,11 +18,11 @@
 import PostList from "@/components/PostList";
 export default {
   components: {
-    PostList
+    PostList,
   },
   metaInfo: {
-    title: "A simple blog"
-  }
+    title: "A simple blog",
+  },
 };
 </script>
 
@@ -50,7 +54,7 @@ query {
   font-family: "Stylish";
   font-size: 35px;
   text-align: center;
-  line-height: 20px;
+  line-height: 1.4em;
   padding: 0.7em;
 }
 
