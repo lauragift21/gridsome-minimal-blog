@@ -21,9 +21,9 @@
 }
 :root [data-theme="sepia"] {
   --text-color: #433422;
-  --border-color: #fecd43;
+  --border-color: #111;
   --bkg-color: #f1e7d0;
-  --line-color: white;
+  --line-color: #111;
 }
 
 :root [data-theme="dark"] {
