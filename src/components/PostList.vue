@@ -1,17 +1,20 @@
 <template>
   <div class="post-list">
-    <hr class="line">
-    <p class="date" v-html="post.date"/>
-    <h3 class="title" v-html="post.title"/>
-    <p class="description" v-html="post.description"/>
-    <b>{{post.timeToRead}} min read</b> &nbsp;
-    <g-link :to="post.path" class="read">Read More <span class="visuallyhidden">about {{post.title}}</span></g-link>
+    <hr class="line" />
+    <p class="date" v-html="post.date" />
+    <h3 class="title" v-html="post.title" />
+    <p class="description" v-html="post.description" />
+    <b>{{ post.timeToRead }} min read</b> &nbsp;
+    <g-link :to="post.path" class="read"
+      >Read More
+      <span class="visuallyhidden">about {{ post.title }}</span></g-link
+    >
   </div>
 </template>
 
 <script>
 export default {
-  props: ["post"]
+  props: ["post"],
 };
 </script>
 
@@ -27,9 +30,9 @@ export default {
 
 .read {
   padding: 7px;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
-  border: 2px dashed #fecd43;
+  border: 2px dashed var(--border-color);
 }
 
 .visuallyhidden {
@@ -49,8 +52,8 @@ export default {
   width: auto;
   height: auto;
   clip: auto;
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--bkg-color);
   clip-path: unset;
 }
 </style>
